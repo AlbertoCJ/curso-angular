@@ -1,5 +1,14 @@
 # Spotiapp
 
+Necesario importar la siguiente colección (SpotiApp.postman_collection.json esta en el proyecto) en postman, para poder generar un token.
+
+Dentro del spotify.service.ts
+```
+const headers = new HttpHeaders({
+      Authorization: 'Bearer (AQUI TOKEN)'
+    });
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.16.
 
 ## Development server
