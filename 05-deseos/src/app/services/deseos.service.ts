@@ -8,7 +8,7 @@ export class DeseosService {
 
   listas: Lista[] = [];
 
-  constructor() { 
+  constructor() {
     this.cargarStorage();
   }
 
@@ -17,6 +17,11 @@ export class DeseosService {
     this.listas.push(nuevaLista);
     this.guardarStorage();
     return nuevaLista.id;
+  }
+
+  borrarLista(lista: Lista) {
+    this.listas = this.listas.filter( listaData => listaData.id !== lista.id);
+    this.guardarStorage();
   }
 
   obtenerLista(id: string | number) {
@@ -35,6 +40,5 @@ export class DeseosService {
     } else {
       this.listas = [];
     }
-    
   }
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DeseosService } from '../../services/deseos.service';
-import { Lista } from '../../models/lista-model';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
@@ -13,11 +12,11 @@ export class Tab1Page {
 
   constructor( public deseosService: DeseosService,
                 private router: Router,
-                private alertController: AlertController) {}
+                private alertCtrl: AlertController) {}
 
 
   async agregarLista() {
-    const alert = await this.alertController.create({
+    const alert = await this.alertCtrl.create({
       header: 'Nueva lista',
       inputs: [
         {
